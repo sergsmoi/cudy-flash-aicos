@@ -1,0 +1,16 @@
+{
+  "log": {"loglevel": "warning"},
+  "inbounds": [
+    {"port":1080,"protocol":"socks","settings":{"auth":"noaccounts"}},
+    {"port":12345,"protocol":"dokodemo-door","settings":{"network":"tcp","followRedirect":true},
+     "streamSettings":{"sockopt":{"tproxy":"tproxy"}},"sniffing":{"enabled":true,"destOverride":["http","tls"]}}
+  ],
+  "outbounds": [{
+    "protocol": "vless",
+    "settings": {"vnext": [{"address":"104.129.54.5","port":443,
+      "users":[{"id":"7486b343-dd86-4225-a865-fb539378fbf6","flow":"xtls-rprx-vision","encryption":"none"}]}]},
+    "streamSettings": {"network":"tcp","security":"reality",
+      "realitySettings": {"serverName":"www.bing.com","fingerprint":"chrome",
+        "publicKey":"phasTcUtsf3F5WZi2HU8vZtZfr201uZ-dCTjKTGNnhQ","shortId":"e038432537643a95"}}
+  }]
+}

@@ -1,0 +1,18 @@
+{
+  "log": {"disabled": true, "level": "warn"},
+  "inbounds": [{"type": "tun", "inet4_address": "172.19.0.1/30", "auto_route": true, "strict_route": false}],
+  "outbounds": [{
+    "type": "vless",
+    "server": "104.129.54.5",
+    "server_port": 443,
+    "uuid": "7486b343-dd86-4225-a865-fb539378fbf6",
+    "flow": "xtls-rprx-vision",
+    "tls": {
+      "enabled": true,
+      "server_name": "www.bing.com",
+      "utls": {"enabled": true, "fingerprint": "chrome"},
+      "reality": {"enabled": true, "public_key": "phasTcUtsf3F5WZi2HU8vZtZfr201uZ-dCTjKTGNnhQ", "short_id": "e038432537643a95"}
+    }
+  }],
+  "route": {"final": "proxy", "auto_detect_interface": true}
+}
